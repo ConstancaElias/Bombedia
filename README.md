@@ -1,4 +1,4 @@
-![bombedia logo](https://github.com/ConstancaElias/Bombedia/blob/main/app-server/public/images/BombediaLogo_logo.png)
+![bombedia logo](https://github.com/ConstancaElias/Bombedia/blob/main/app-server/public/images/BombediaLogo_blue.png)
 
 A web app that evaluates the ability of a portuguese post to trigger controversy.
 
