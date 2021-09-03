@@ -1,0 +1,171 @@
+extends layout
+
+block content
+    
+    
+    // --====== SLIDER PART START ======
+
+    section(id="home" class="slider_area")
+        div(id="carouselThree" class="carousel slide" data-ride="carousel")
+            ol(class="carousel-indicators")
+                li(data-target="#carouselThree" data-slide-to="0" class="active")
+                li(data-target="#carouselThree" data-slide-to="1")
+
+            div(class="carousel-inner")
+                div(class="carousel-item active")
+                    div(class="container")
+                        div(class="row")
+                            div(class="col-lg-6")
+                                div(class="slider-content")
+                                    h1(class="title") O Projeto
+                                    p(class="text") Analisamos a possibilidade de um text de 
+                                        i media
+                                        span &nbsp; gerar controvérsia
+                                    ul(class="slider-btn rounded-buttons")
+                                        li
+                                            a(class="main-btn rounded-one" href="#projeto") SABER MAIS
+                              
+                    div(class="slider-image-box d-none d-lg-flex align-items-end")
+                        div(class="slider-image")
+                            img(src="/images/project.png" alt="Hero")
+                    
+
+                div(class="carousel-item")
+                    div(class="container")
+                        div(class="row")
+                            div(class="col-lg-6")
+                                div(class="slider-content")
+                                    h1(class="title") Ferramenta de Classificação
+                                    p(class="text") 
+                                    ul(class="slider-btn rounded-buttons")
+                                        li
+                                            a(class="main-btn rounded-one" href="#") SABER MAIS
+                          
+                    div(class="slider-image-box d-none d-lg-flex align-items-end")
+                        div(class="slider-image")
+                            img(src="/images/classify.png" alt="Hero")
+                      
+                
+
+            a(class="carousel-control-prev" href="#carouselThree" role="button" data-slide="prev")
+                i(class="lni lni-arrow-left")
+            
+            a(class="carousel-control-next" href="#carouselThree" role="button" data-slide="next")
+                i(class="lni lni-arrow-right")
+
+
+    // --====== SLIDER PART ENDS ======
+
+    // --====== FEATURES TWO PART START ======
+
+    section(id="projeto" class="features-area")
+        div(class="container")
+            div(class="row justify-content-center")
+                div(class="col-lg-10 col-md-12")
+                    div(class="section-title text-center pb-10")
+                        h3(class="title") O Projeto
+                        p(class="text") Agora já podes saber se esse texto será controverso ou não!
+                    div(class="section-title text-left text-justify pb-10 mt-4")
+                        div(class="m-2 p-2")
+                            h4 Em que consiste?
+                        div(class="container")    
+                            p(style="text-align: justify") O #[strong Bombedia] analisa textos de artigos ou #[i posts] (concretamente em língua portuguesa) e avaliar a sua potencialidade para despoletar controvérsia.
+
+                            p(style="text-align: justify") Um #[i post] é considerado #[strong controverso] se o sentimento associado ao total das palavras que a compõem for negativo ou positivo (não sendo por isso neutro), indicando que palavras conotadas com um sentimento forte têm maior capacidade para despoletar diversidade de opiniões. A classificação como #[strong controversa] pode ser subdividida em duas categorias, #[strong positiva] ou #[strong negativa] indicando a carga emocional associada à notícia.
+                        div(class="m-2 p-2")
+                            h4 Porque surgiu?
+                        div(class="container")    
+                            p(style="text-align: justify") A principal motivação foi a importância da contribuição deste estudo para a #[strong análise] que existe nesta área em #[strong português] (que é bastante escassa quando comparada com a língua inglesa).
+
+            div(class="row justify-content-center")
+                div(class="col-lg-10 col-md-12")
+                    div(class="section-title text-center pb-10")
+                        div(class="section-title text-left text-justify pb-10 mt-4")
+                            div(class="m-2 p-2")
+                                h4 Arquitetura do Bombedia     
+            div(class="row justify-content-center")
+                div(class="col-lg-10 col-md-7 col-sm-9")
+                    div(class="single-features mt-40")
+                        div(class="features-title-icon d-flex justify-content-between")
+                            //h4(class="features-title text-center") Arquitetura
+                            //div(class="features-icon")
+                                i(class="lni lni-brush")
+                                img(class="shape" src="assets/images/f-shape-1.svg" alt="Shape")
+                          
+                        div(class="features-content")
+                            img(class="shape" src="images/diagrams/arquiteturaBombedia.png" alt="Diagrama da arquitetura")
+                            //a(class="features-btn" href="#") LEARN MORE
+               
+    // --====== FEATRES TWO PART ENDS ======
+
+    // --====== FEATRES TWO PART START ======
+
+    section(id="ferramenta" class="features-area")
+        div(class="container")
+            div(class="row justify-content-center")
+                div(class="col-lg-10 col-md-10")
+                    div(class="section-title text-center pb-10")
+                        h3(class="title") Ferramenta de Classificação
+                        p(class="text") Apresenta-se aqui um diagrama da arquitetura de ferramenta de classificação desenvolvida!
+                 
+            div(class="row justify-content-center")
+                div(class="col-lg-10 col-md-7 col-sm-9")
+                    div(class="single-features mt-10")
+                        div
+                            img( src="/images/diagrams/classifier_diagram.png" alt="Diagrama da arquitetura")
+                            //h4(class="features-title") 
+                            //div(class="features-icon")
+                                i(class="lni lni-brush")
+                                img(class="shape" src="assets/images/f-shape-1.svg" alt="Shape")
+                          
+                        //div(class="features-content")
+                            img(class="shape" src="/images/arquitetura.png" alt="Diagrama da arquitetura")
+                            a(class="features-btn" href="#") LEARN MORE
+
+
+            div(class="row justify-content-center")
+                div(class="col-lg-10 col-md-12")
+                    div(class="section-title text-center pb-10")
+                        div(class="section-title text-left text-justify pb-10 mt-4")
+                            div(class="m-2 p-2")
+                                h4 Pesquisa de Palavras  
+            div(class="row justify-content-center")
+                div(class="col-lg-10 col-md-7 col-sm-9")
+                    div(class="single-features mt-40")
+                        div(class="features-title-icon d-flex justify-content-between")
+                            //h4(class="features-title text-center") Arquitetura
+                            //div(class="features-icon")
+                                i(class="lni lni-brush")
+                                img(class="shape" src="assets/images/f-shape-1.svg" alt="Shape")
+                          
+                        div(class="features-content")
+                            img(class="shape" src="images/diagrams/searchWords_diagram.png" alt="Diagrama da arquitetura")
+                            //a(class="features-btn" href="#") LEARN MORE
+
+
+            div(class="row justify-content-center")
+                div(class="col-lg-10 col-md-12")
+                    div(class="section-title text-center pb-10")
+                        div(class="section-title text-left text-justify pb-10 mt-4")
+                            div(class="m-2 p-2")
+                                h4 Temas mais Procurados
+            div(class="row justify-content-center")
+                div(class="col-lg-10 col-md-7 col-sm-9")
+                    div(class="single-features mt-40")
+                        div(class="features-title-icon d-flex justify-content-between")
+                            //h4(class="features-title text-center") Arquitetura
+                            //div(class="features-icon")
+                                i(class="lni lni-brush")
+                                img(class="shape" src="assets/images/f-shape-1.svg" alt="Shape")
+                          
+                        div(class="features-content")
+                            img(class="shape" src="images/diagrams/trendTopics_diagram.png" alt="Diagrama da arquitetura")
+                            //a(class="features-btn" href="#") LEARN MORE
+               
+               
+    // --====== FEATuRES TWO PART ENDS ======
+  
+    
+
+
+   

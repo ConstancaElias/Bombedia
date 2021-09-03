@@ -1,0 +1,44 @@
+extends layout
+
+block content      
+    section(id="services" class="features-area" style="background-color: #0067f4")
+        div(class="container p-7" style="background-color: white")
+            div(class="row justify-content-center p-4")
+                div(id="containerProfile" class="container m-6")
+                    div(class="row gutters-sm")
+                        div(class="col-md-4 mb-3")
+                            div(class="card rounded")
+                                div(class="card-body")
+                                    div(class="d-flex flex-column align-items-center text-center")
+                                        img(src="/images/users/#{user.mail}.png" onerror="javascript:this.src='/images/users/default_user.png'" class="rounded-circle" width="150" height="150")
+                                        div(class="mt-3")
+                                            h4 #{user.mail}
+                                            p(class="text-secondary mb-1") #{user.filiation}
+                                //div(class="d-flex flex-column align-items-center text-center m-4")
+                                    button(class="btn btn-blue")
+                                    i(class="fas fa-edit")
+                                    span  Edit profile
+                                
+                        div(class="col-my-3 mx-5")
+                            p
+                                b My analysis
+                                div(class="table-responsive")
+                                    table(class="table")
+                                        thead
+                                            tr
+                                                th(scope="col")
+                                                th(scope="col") Date
+                                                th(scope="col") Post
+                                                th(scope="col") Classification
+                                        tbody
+                                            each post in posts
+                                                tr
+                                                    th(scope="row")
+                                                    td
+                                                        a #{post.date}
+                                                    td
+                                                        a #{post.text}
+                                                    td
+                                                        a #{post.classification}
+                                            
+                                    

@@ -1,0 +1,64 @@
+extends layout
+
+block content
+  if view == "trends"
+    section(id="services" class="features-area" style="background-color: #0067f4")
+        div(class="container-fluid mx-1 my-5" id="dailySearches")
+            h4(class="text-center" style="color: white") Temas mais procurados
+
+        div(class="container")
+            div(class="container-fluid mx-1 p-3" style="background-color: white")
+              form(action="/trends" method="POST")
+                p Selecione uma data:
+                input(name="date" type="date" id="datepicker" min="2021-06-08" max=today value=today)
+                //div(class="custom-control custom-checkbox")
+                  input(type="checkbox" class="custom-control-input" id="date1-1" name="date" value="today")
+                  label(class="custom-control-label" for="date1-1") Hoje
+
+                //div(class="custom-control custom-checkbox")
+                  input(type="checkbox" class="custom-control-input" id="date1-2" name="date" value="2020")
+                  label(class="custom-control-label" for="date1-2") 2020
+
+                  
+                
+                //div(class="form-group")
+                  label(for="date1" style="color: white") Selecione uma data:
+                  select(class="form-control" id="date1")
+                    option(name="date" value="today") Hoje
+                    option(name="date" value="202005") Maio 2020
+
+                button(class="btn btn-sm btn-primary m-2" type="submit") Procurar
+
+          div(class="container")
+            div(class="container-fluid mx-1" style="background-color: white")
+                div(class="row justify-content-center")
+                  div(class="table-responsive" style="overflow-x: auto")
+                    table(id="trendsTable" class="table table-striped")
+                      thead
+                        tr
+                          th Ranking
+                          th Tópico
+                      tbody
+                        each word, i in words
+                          tr
+                            -var i1 =parseFloat(i) + 1
+                            th(scope="row")= i1
+                            td(style ="word-break:break-all")
+                              a(href="https://www.google.com/search?q=#{word}") #{word}
+
+
+  else
+    section(id="services" class="features-area" style="background-color: #0067f4")
+        div(class="container-fluid mx-1 my-5")
+          div(class="row justify-content-center")
+            div(class="col-lg-6 col-md-10")
+               div(class="section-title text-center pb-10")
+                  h3(class="title" style="color: white") Temas ao longo do tempo
+                  p(class="text m-5" style="color: white") Nesta secção podes analisar o interesse que um determinado tema teve ao longo do tempo!
+
+                  form(action="/trends/trendsTime" method="POST")
+                    input(class="form-control" id="input_tema" name="tema" placeholder="Introduz aqui um tema..." required='true')
+                    button(class="btn btn-sm btn-primary m-3" type="submit") Submeter
+                  
+                  img(src=`${figname}` alt="graphic" onerror="javascript:this.src='/images/PlayStation.png'")
+                    

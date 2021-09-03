@@ -1,0 +1,69 @@
+extends layout
+
+block content
+
+  if view == "no_text"
+    section(id="services" class="features-area" style="background-color: #0067f4")
+      div(class="container-fluid mx-1 my-5")
+        div(class="row justify-content-center")
+          div(class="col-lg-6 col-md-10")
+            div(class="modal" id="session-expired-modal" tabindex="-1" role="dialog" style="display:block" aria-labelledby="myModalLabel")
+              div(class="modal-dialog" role="document")
+                div(class="modal-content")
+                  div(class="modal-header")
+                    h4(class="modal-title") Sem texto
+                  
+                  div(class="modal-body")
+                    span Não introduziste nenhum texto!
+                  
+                  div(class="modal-footer")
+                    form(method="get" action="/login")
+                      input(type="submit" class="btn btn-primary" value="Login" style="padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: normal; border: 1px solid transparent; border-radius: 4px; background-color: #428bca; color: #FFF;")
+
+  if view == "sessionExpired"
+    div(class="modal" id="session-expired-modal" tabindex="-1" role="dialog" style="display:block" aria-labelledby="myModalLabel")
+      div(class="modal-dialog" role="document")
+        div(class="modal-content")
+          div(class="modal-header")
+            h4(class="modal-title") Session Expired
+          
+          div(class="modal-body")
+            span Your session has expired.
+          
+          div(class="modal-footer")
+            form(method="get" action="/login")
+              input(type="submit" class="btn btn-primary" value="Login" style="padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: normal; border: 1px solid transparent; border-radius: 4px; background-color: #428bca; color: #FFF;")
+  
+  if view == "noSession"
+     div(class="modal" id="session-expired-modal" tabindex="-1" role="dialog" style="display:block" aria-labelledby="myModalLabel")
+      div(class="modal-dialog" role="document")
+        div(class="modal-content")
+          div(class="modal-header")
+            h4(class="modal-title") No session
+          
+          div(class="modal-body")
+            span You don't have permissions to access this route.
+            br
+            span You must login first!
+          
+          div(class="modal-footer")
+            form(method="get" action="/login")
+              input(type="submit" class="btn btn-primary" value="Login" style="padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: normal; border: 1px solid transparent; border-radius: 4px; background-color: #428bca; color: #FFF;")
+  
+  if view == "url_invalid"
+    section(id="services" class="features-area" style="background-color: #0067f4")
+      div(class="container-fluid mx-1 my-5")
+        div(class="row justify-content-center")
+          div(class="col-lg-6 col-md-10")
+            div(class="modal" id="session-expired-modal" tabindex="-1" role="dialog" style="display:block" aria-labelledby="myModalLabel")
+              div(class="modal-dialog" role="document")
+                div(class="modal-content")
+                  div(class="modal-header")
+                    h4(class="modal-title") URL Inválido
+                  
+                  div(class="modal-body")
+                    form(action="/analyse")
+                      button(class="btn btn-round btn-primary p-2 mt-5") Voltar
+  else
+    h4= myMessage
+

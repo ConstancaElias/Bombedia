@@ -1,0 +1,53 @@
+extends layout
+
+block content
+    if view == "text"
+        section(id="services" class="features-area" style="background-color: #0067f4")
+            div(class="container my-5")
+                div(class="row justify-content-center")
+                    div(class="col-lg-6 col-md-10")
+                        div(class="section-title text-center pb-10")
+                            h3(class="title" style="color: white") Analisador
+                            p(class="text"  style="color: white") Analisa aqui o teu texto para ver se é bombástico!
+                        
+                div(class="row justify-content-center")
+                    div(class="col-lg-12 col-md-10 col-sm-9")
+                        div(class="single-features my-10")
+                                form(method='post' action=`/analyse`)
+                                    div(class="form-group")
+                                        label(Class="sr-only" for="message") post
+                                        textarea(class="form-control" type="text" id="message" name="post" rows="6" placeholder="Introduza aqui o texto do post" required='true')
+
+        
+                                    div(class="btn-toolbar justify-content-between")
+                                        div(class="btn-group")
+                                        button(type="submit" class="btn btn-primary" id="btn-analyse") Analisar
+
+                                //div(id="api_output")
+    else
+        section(id="services" class="features-area" style="background-color: #0067f4")
+            div(class="container")
+                div(class="row justify-content-center")
+                    div(class="col-lg-6 col-md-10")
+                        div(class="section-title text-center pb-10")
+                            h3(class="title" style="color: white") Analisador por URL
+                            p(class="text" style="color: white") Introduz aqui o&nbsp; 
+                                i link
+                                | &nbsp; da notícia ou &nbsp;
+                                i post &nbsp;
+                                | que pretendes analisar!
+                        
+                div(class="row justify-content-center")
+                    div(class="col-lg-12 col-md-10 col-sm-9")
+                        div(class="single-features my-10")
+                            form(method='post' action=`/analyse/url`)
+                                div(class="form-group")
+                                    label(Class="sr-only" for="message") post
+                                    input(class="form-control" id="message" name="url" placeholder="URL..." required='true')
+                                
+                                div(class="btn-toolbar justify-content-between")
+                                    div(class="btn-group")
+                                    button(type="submit" class="btn btn-primary") Submeter
+
+
+        

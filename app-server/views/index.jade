@@ -1,0 +1,28 @@
+extends layout
+
+block content
+            
+    if view == "statistics"
+      div(class="container-fluid px-1 px-sm-4 pt-5 mx-auto")
+        div(class="row d-flex justify-content-start card-strip")
+          div(class="mr-4 mb-3")
+            strong Number of users: &nbsp;
+            span= usersLength
+          div(class="info")
+            div(class="row px-3 mb-2")
+              strong Number of resources: &nbsp;
+              span= resourcesLength
+        //div(class="row d-flex justify-content-start card-strip")
+          div(class="mr-4 mb-3")
+            div(class="p-2")
+              strong Add a new type of resource 
+              span (e.g.: application, open textbook...):
+            form(method="POST" action="/edit/newTypeResource")
+              div(class="form-label-group") 
+                input(type="text" id="inputTitle" name="type" class="form-control" placeholder="New Type" required)
+                label(for="inputTitle") New type
+              input(class="btn btn-primary" type="submit" value="submit")
+               
+    
+
+
