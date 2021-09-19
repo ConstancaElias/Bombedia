@@ -20,9 +20,9 @@ More details about the the implementation of this project can be found [here](ht
 
 ## Authors
 
--   **Constança Elias:** [ConstancaElias](https://github.com/ConstancaElias)
--   **Jorge Brandão:** [jorgemiguel99](https://github.com/jorgemiguel99)
--   **Maria Barbosa:** [maria85290](https://github.com/maria85290)
--   **Pedro Pinheiro:** [Pinheiro9655](https://github.com/Pinheiro9655)
+-   [Constança Elias](https://github.com/ConstancaElias)
+-   [Jorge Brandão](https://github.com/jorgemiguel99)
+-   [Maria Araújo](https://github.com/maria85290)
+-   [Pedro Pinheiro](https://github.com/Pinheiro9655)
 
 This project was developed for the course unit of Computer Engineering Laboratories (Computer Engineering MS @ Uminho - 2020/2021)
